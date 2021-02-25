@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-light: rgb(233, 243, 255);
+  --primary-dark: rgb(46, 52, 59);
+}
+
+@mixin font($a, $b, $c) {
+  font-weight: $a;
+  font-size: $b;
+  color: $c;
+}
+
+%flexBasic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%buttonText {
+  button {
+    border: none;
+    padding: 8px 10px;
+    letter-spacing: 1px;
+    background-color: var(--primary-dark);
+    width: 12rem;
+    margin: 0.5rem 0;
+    text-align: left;
+    @include font(300, 0.8rem, var(--primary-light));
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
+svg line,
+svg circle {
+  stroke: var(--primary-light);
+  stroke-width: 2px;
+  fill: #ccc;
+}
+.word {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  & .letter {
+    width: 1rem;
+    @include font(800, 1.5rem, var(--primary-light));
+    margin: 0 0.3rem;
+    border-bottom: 1px var(--primary-light) solid;
+  }
+}
+.wrong-letters-container {
+  display: block;
+  text-align: center;
+  height: 7rem;
+  & p,
+  & span {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 0.2rem 0.3rem;
+    border-radius: 5px;
+  }
+  & p {
+    @include font(500, 1.2rem, --primary-dark);
+  }
+}
+
+.popup-container {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00000080;
+  @extend %flexBasic;
+
+  & .popup {
+    box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.287);
+    background: var(--primary-light);
+    padding: 1.5rem;
+    color: var(--primary-dark);
+    text-align: center;
+    & div {
+      @include font(500, 1.2rem, --pvar(--primary-dark));
+      margin: 1rem 0;
+    }
+  }
+  @extend %buttonText;
+}
+
+.notification-container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  height: 5rem;
+  width: 70%;
+  color: var(--primary-dark);
+  text-align: center;
+  border-radius: 10px;
+  transform: translateY(2rem);
+}
+.figure-part {
+  display: none;
+}

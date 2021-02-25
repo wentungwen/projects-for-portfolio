@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --yellow-color:#ffe600
+;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #141d44;
+  color: #fff;
+  font-family: "Montserrat";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.movie-container label {
+  font-weight: 600;
+}
+
+.movie-container select#movie {
+  background: #ffffff;
+  padding: 5px 7px;
+  margin-left: 7px;
+  border-radius: 31px;
+}
+
+.movie-container select#movie:focus {
+  outline: none;
+}
+
+ul.showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+ul.showcase li {
+  margin: 0 0.5rem;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+p.text {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+p.text span {
+  color: var(--yellow-color);
+  font-size: 1.5rem;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.seat {
+  width: 15px;
+  height: 12px;
+  background: #666666;
+  margin: 3px;
+  border-radius: 5px 5px 0 0;
+}
+
+.seat:not(.occupied):hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+}
+
+.seat.selected {
+  background-color: var(--yellow-color);
+}
+
+.seat.occupied {
+  background-color: white;
+}
+
+.screen {
+  height: 30px;
+  width: 123px;
+  background: #fff;
+  margin-bottom: 1rem;
+  -webkit-transform: perspective(43px);
+          transform: perspective(43px);
+  -webkit-box-shadow: 0 0.1rem 1rem #fff;
+          box-shadow: 0 0.1rem 1rem #fff;
+}
+/*# sourceMappingURL=style.css.map */

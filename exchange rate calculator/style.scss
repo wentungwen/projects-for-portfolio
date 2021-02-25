@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-light: #ffe14d;
+  --primary-dark: #d17e2b;
+}
+
+@mixin font($a, $b, $c) {
+  font-weight: $a;
+  font-size: $b;
+  color: $c;
+}
+
+%flexBasic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%buttonText {
+  button {
+    border: none;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    border-radius: 50px;
+    width: 5rem;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+img.money-img {
+  width: 120px;
+}
+h1 {
+  @include font(600, 1.8rem, var(--primary-dark));
+  text-transform: capitalize;
+}
+p {
+  @include font(400, 1rem, var(--primary-dark));
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+
+  & select {
+    width: 5rem;
+    height: 2rem;
+    border: var(--primary-dark) solid 1px;
+    border-radius: 50px;
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  & input {
+    width: 100%;
+    border: 0;
+    @include font(500, 1.8rem, --primary-dark);
+    text-align: right;
+  }
+  & .currency {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+  }
+  & .swap-rate-container {
+    @extend %buttonText;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+h4 span {
+  float: right;
+}

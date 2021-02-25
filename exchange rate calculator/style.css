@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary-light: #ffe14d;
+  --primary-dark: #d17e2b;
+}
+
+.container .swap-rate-container button {
+  border: none;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  border-radius: 50px;
+  width: 5rem;
+}
+
+.container .swap-rate-container button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.container .swap-rate-container button:focus, .container .swap-rate-container button:active {
+  outline: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+img.money-img {
+  width: 120px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  text-transform: capitalize;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--primary-dark);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 600px;
+}
+
+.container select {
+  width: 5rem;
+  height: 2rem;
+  border: var(--primary-dark) solid 1px;
+  border-radius: 50px;
+}
+
+.container select:active, .container select:focus {
+  outline: 0;
+}
+
+.container input {
+  width: 100%;
+  border: 0;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: --primary-dark;
+  text-align: right;
+}
+
+.container .currency {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+.container .swap-rate-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+h4 span {
+  float: right;
+}
+/*# sourceMappingURL=style.css.map */

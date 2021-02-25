@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+<<<<<<< HEAD
+  --primary-light: rgb(39, 134, 243);
+  --primary-dark: rgb(28, 94, 168);
+=======
+  --primary-light: rgb(231, 231, 231);
+  --primary-dark: rgb(44, 44, 44);
+>>>>>>> 53928331307727648d4616a5710d8f3f3d6c83ae
+}
+
+@mixin font($a, $b, $c) {
+  font-weight: $a;
+  font-size: $b;
+  color: $c;
+}
+
+%flexBasic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%buttonText {
+<<<<<<< HEAD
+  button {
+=======
+  
+>>>>>>> 53928331307727648d4616a5710d8f3f3d6c83ae
+    border: none;
+    padding: 8px 12px;
+    letter-spacing: 1px;
+    background-color: var(--primary-dark);
+<<<<<<< HEAD
+    width: 12rem;
+=======
+    width: 100%;
+>>>>>>> 53928331307727648d4616a5710d8f3f3d6c83ae
+    margin: 0.5rem 0;
+    text-align: left;
+    @include font(300, 1.1rem, var(--primary-light));
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+<<<<<<< HEAD
+  }
+=======
+  
+>>>>>>> 53928331307727648d4616a5710d8f3f3d6c83ae
+}
+
+* {
+  box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  margin: 0;
+>>>>>>> 53928331307727648d4616a5710d8f3f3d6c83ae
+}
+
+body {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+<<<<<<< HEAD
+  overflow: hidden;
+  margin: 0;
+}
+=======
+  // overflow: hidden;
+ 
+  background-color: var(--primary-light);
+}
+
+
+h2{
+  @include font(800,2rem ,var(--primary-dark) );
+  text-transform: uppercase;
+
+}
+h4{
+   margin: .5rem 0 
+}
+h3{
+  margin: 1.5rem .8rem 0 0 ;
+  border-bottom: 1px solid var(--primary-dark)
+  
+}
+.container{
+  @extend %flexBasic;
+  flex-direction: column;
+ 
+}
+.inc-exp-container{ 
+  padding: 1rem;
+  margin: 1rem;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+
+   
+   & >div{
+    background-color: #fff;
+    box-shadow: 0 0 .2rem .2rem #00000015;
+    padding: 1rem;
+    margin: .5rem 0;
+  }
+
+  & .list{
+    margin: 1rem 0;
+    padding-left: 0;
+
+    
+    & .minus{
+      list-style: none;
+      background-color: #fff;
+      padding: .5rem;
+      margin-left: 0;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+
+      & .delete-btn{
+        position: absolute;
+        left: -35px;
+        top: 0;
+        height: 100%;
+        width: 2rem;
+        background-color: rgba(255, 0, 0, 0.466);
+        border: 0;
+        color: #fff;
+        border-radius: 5px 0 0 5px;
+      }
+    }
+  }
+  & form{
+    font-weight: 400;
+    margin: 1rem 0;
+    & *{
+      width: 100%;
+    }
+    & .form-control{
+      margin: 1rem 0;
+      & label{
+        @include font(500,1rem ,var(--primary-dark) );
+        
+      }
+      & input{
+        height: 30px;
+        margin: .5rem 0;
+      }
+      
+    }
+    
+  }
+  & .btn{
+    @extend %buttonText;
+  }
+  
+
+}
+>>>>>>> 53928331307727648d4616a5710d8f3f3d6c83ae

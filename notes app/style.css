@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --primary-light: rgb(163, 235, 245);
+  --primary-dark: rgb(73, 139, 34);
+}
+
+.add {
+  border: none;
+  padding: 8px 12px;
+  letter-spacing: 1px;
+  background-color: var(--primary-dark);
+  width: 12rem;
+  margin: 0.5rem 0;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.add:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.add:focus, .add:active {
+  outline: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  height: 100vh;
+  margin: 0;
+  background-color: var(--primary-light);
+}
+
+.add {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.note {
+  width: 250px;
+  height: 300px;
+  -webkit-box-shadow: 0 0 .5rem .5rem #00020044;
+          box-shadow: 0 0 .5rem .5rem #00020044;
+}
+
+.note .tools {
+  background-color: var(--primary-dark);
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.note .tools button {
+  color: #fff;
+  border: 0;
+  background-color: transparent;
+}
+
+.note textarea {
+  width: 100%;
+  height: calc(100% - 30px);
+  resize: none;
+  border: 0;
+}
+
+.note textarea:active, .note textarea:focus {
+  outline: none;
+  border: 0;
+}
+/*# sourceMappingURL=style.css.map */
