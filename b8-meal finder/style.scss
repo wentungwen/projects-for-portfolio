@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-light: rgb(255, 245, 221);
+  --primary-dark: rgb(80, 55, 15);
+  --box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, 0.301);
+}
+
+@mixin font($a, $b, $c) {
+  font-weight: $a;
+  font-size: $b;
+  color: $c;
+}
+
+
+%flexBasic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%buttonText {
+ 
+    border: none;
+    padding: 8px 12px;
+    letter-spacing: 1px;
+    background-color: var(--primary-dark);
+    width: 12rem;
+    margin: 0.5rem 0;
+    text-align: left;
+    @include font(300, 1.1rem, var(--primary-light));
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+
+
+* {
+  box-sizing: border-box;
+  // margin: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color:var(--primary-dark);
+  
+    color: #fff;
+  & h1{
+    text-transform: uppercase;
+  }
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+
+  &+button{
+    margin-left: .5rem;
+  }
+
+  & input{
+    height: 2rem;
+  }
+  & button{
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--primary-light);
+    border: none;
+  }
+  & form{
+    box-shadow: var(--box-shadow);
+  }
+}
+
+
+.meals {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.meal {
+  width: calc(100%/5);
+  position: relative;
+  margin: .1rem;
+  & img {
+     width: 100%;
+  }
+}
+.meal-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  &:hover{
+    background: #0000005c;
+    color: #fff;
+    transition:all .4s ease-in-out;
+  }
+}
+h2{
+  color: #fff;
+}
+
+#single-meal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 300px;
+  }
+}
+
+
