@@ -73,6 +73,15 @@ body {
       color: #fff;
       border: 0;
       background-color: transparent;
+
+      &:focus, &:active{
+        outline: none;
+        border: none;
+      }
+
+      &:hover{
+        transform: scale(1.02);
+      }
     }
   }
   & textarea{

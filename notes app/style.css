@@ -72,6 +72,16 @@ body {
   background-color: transparent;
 }
 
+.note .tools button:focus, .note .tools button:active {
+  outline: none;
+  border: none;
+}
+
+.note .tools button:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
 .note textarea {
   width: 100%;
   height: calc(100% - 30px);
